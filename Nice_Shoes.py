@@ -8,6 +8,8 @@ ws = wb.active
 workbook = xlrd.open_workbook('CSVTest.xlsx')
 worksheet = workbook.sheet_by_index(0)
 
+# Function clears data from unnecesary elements
+
 def good_shoe():
     global a
     a = str(a)
@@ -33,6 +35,8 @@ def good_shoe():
         a[i] = a[i].replace('rounI:', '')
 
 
+# Writes clear data into separate collumns in new excel file
+
 c = -1
 for row in range(4, worksheet.nrows):
     a = worksheet.cell_value(row, 6)
@@ -46,6 +50,8 @@ for row in range(4, worksheet.nrows):
         else:
             ws.cell(row=r, column=c).value = str(p)
         r += 1
+
+# Reads and clears start time and writes it above each collumn
 
 time_start = 2
 for row in range(4, worksheet.nrows):
@@ -67,6 +73,8 @@ for row in range(4, worksheet.nrows):
     #steps
     time_start += 3
     
+# Reads and clears end time and writes it above each collumn
+
 time_end = 3
 for row in range(4, worksheet.nrows):
     b = worksheet.cell_value(row, 4)
@@ -86,7 +94,9 @@ for row in range(4, worksheet.nrows):
     ws.cell(row= 2, column= time_end).value = sfuffle_end
     #steps
     time_end += 3
-    
+
+#Reads and writes date and writes it to the very top of each collumn
+
 shuffle_date_count = 2
 for row in range(4, worksheet.nrows):
     d = worksheet.cell_value(row, 4)
