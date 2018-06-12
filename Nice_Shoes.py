@@ -69,7 +69,7 @@ for row in range(4, worksheet.nrows):
     sfuffle_start = sfuffle_start.replace(' ', '')
     sfuffle_start = sfuffle_start[sfuffle_start.find('-'):]
     sfuffle_start = sfuffle_start.replace('-', '')    
-    ws.cell(row= 2, column= time_start).value = sfuffle_start
+    ws.cell(row=2, column=time_start).value = sfuffle_start
     #steps
     time_start += 3
     
@@ -91,7 +91,7 @@ for row in range(4, worksheet.nrows):
     sfuffle_end = sfuffle_end.replace(' ', '')
     sfuffle_end = sfuffle_end[sfuffle_end.find('-'):]
     sfuffle_end = sfuffle_end.replace('-', '')    
-    ws.cell(row= 2, column= time_end).value = sfuffle_end
+    ws.cell(row=2, column=time_end).value = sfuffle_end
     #steps
     time_end += 3
 
@@ -110,7 +110,7 @@ for row in range(4, worksheet.nrows):
     shuffle_date = shuffle_date.replace(')', '')
     shuffle_date = shuffle_date.replace(' ', '')
     shuffle_date = shuffle_date.replace(',', '.')
-    ws.cell(row= 1, column= shuffle_date_count).value = shuffle_date
+    ws.cell(row=1, column=shuffle_date_count).value = shuffle_date
     #steps
     shuffle_date_count += 3
     
